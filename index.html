@@ -29,34 +29,39 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Link</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Dropdown
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link disabled">Disabled</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div class="d-flex" role="search">
+                        <input id="search-field" class="form-control me-3" type="search" placeholder="Search Your Book"
+                            aria-label="Search">
+                        <button id="btn-search" class="btn btn-outline-success" type="submit"
+                            onclick="searchBook()">Search</button>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
+        <h1 class="text-success my-3 py-2 shadow-lg text-center fst-italic">Search Your Books</h1>
+        <section style="height: 200px;" id="spinner"
+            class="d-none container d-flex gap-2 justify-content-center align-items-center">
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                <span class="visually-hidden">Loading...</span>
+            </button>
+            <button class="btn btn-primary" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+            </button>
+        </section>
+        <section class="container my-5">
+            <div id="books-container" class="row row-cols-1 row-cols-md-3 g-4">
+
+            </div>
+        </section>
 
     </main>
 
